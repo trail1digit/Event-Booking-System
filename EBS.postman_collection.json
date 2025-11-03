@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "a7faec35-9587-40e7-a9c3-2c09cd53ff7c",
+		"name": "EBS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48514468",
+		"_collection_link": "https://trial-1digittechnology-8469133.postman.co/workspace/Raj-Bhatt's-Workspace~7a720c64-dd99-4063-8e16-5762148f7d3e/collection/48514468-a7faec35-9587-40e7-a9c3-2c09cd53ff7c?action=share&source=collection_link&creator=48514468"
+	},
+	"item": [
+		{
+			"name": "role-addModule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"module_name\": \"User Details\",\r\n    \"icon\": \"\",\r\n    \"path\": \"/users\",\r\n    \"key\": \"users\",\r\n    \"position\": \"3\",\r\n    \"parent_id\": \"69084239ac5db4acc027a633\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/role/addModule",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"role",
+						"addModule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role-getModules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ4YmQ3YWRjZjE4NGRmYWUyZTg4NyIsInJvbGVfaWQiOiI2OTA0NjE1NzI0YjJhZDE2ODViNzM1NjAiLCJpYXQiOjE3NjE5MDU5NTcsImV4cCI6MTc2MjUxMDc1N30.U0xzcD1iutpqIkChqHjm27tZFzFDvO8a-CZN9HmVSoI"
+					}
+				],
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/role/getModules",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"role",
+						"getModules"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8000/api/role/getModules' \\\r\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDQ4YmQ3YWRjZjE4NGRmYWUyZTg4NyIsInJvbGVfaWQiOiI2OTA0NjE1NzI0YjJhZDE2ODViNzM1NjAiLCJpYXQiOjE3NjE5MDU5NTcsImV4cCI6MTc2MjUxMDc1N30.U0xzcD1iutpqIkChqHjm27tZFzFDvO8a-CZN9HmVSoI'"
+			},
+			"response": []
+		},
+		{
+			"name": "role-addRole",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"role_name\": \"Organizer\",\r\n  \"is_admin\": false,\r\n  \"permission\": [\r\n    {\r\n      \"module_id\": \"69084139ac5db4acc027a62f\",\r\n      \"create\": true,\r\n      \"edit\": true,\r\n      \"list\": true,\r\n      \"delete\": true\r\n    },\r\n    {\r\n      \"module_id\": \"69084239ac5db4acc027a633\",\r\n      \"create\": true,\r\n      \"edit\": true,\r\n      \"list\": true,\r\n      \"delete\": true\r\n    },\r\n    {\r\n      \"module_id\": \"690842c6ac5db4acc027a635\",\r\n      \"create\": true,\r\n      \"edit\": true,\r\n      \"list\": true,\r\n      \"delete\": true\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/role/addRole",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"role",
+						"addRole"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8000/api/role/addRole' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n  \"role_name\": \"Manager\",\r\n  \"is_admin\": true,\r\n  \"permission\": [\r\n    {\r\n      \"module_id\": \"690456454bbd70fe5eea8bac\",\r\n      \"submodule_id\": \"\",\r\n      \"create\": true,\r\n      \"edit\": true,\r\n      \"list\": true,\r\n      \"delete\": true\r\n    },\r\n    {\r\n      \"module_id\": \"690457294bbd70fe5eea8bae\",\r\n      \"submodule_id\": \"690459a0c5b310ecbbaabed7\",\r\n      \"create\": true,\r\n      \"edit\": true,\r\n      \"list\": true,\r\n      \"delete\": true\r\n    },\r\n    {\r\n      \"module_id\": \"690457294bbd70fe5eea8bae\",\r\n      \"submodule_id\": \"690459efc5b310ecbbaabed9\",\r\n      \"create\": true,\r\n      \"edit\": true,\r\n      \"list\": true,\r\n      \"delete\": true\r\n    }\r\n  ]\r\n}\r\n'"
+			},
+			"response": []
+		},
+		{
+			"name": "user-register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"role_id\": \"69086589336052420a1d42ac\",\r\n    \"name\": \"Hina Patel\",\r\n    \"address\": \"Navsari\",\r\n    \"email\": \"patelhina.sd@gmail.com\",\r\n    \"password\": \"hina@123\",\r\n    \"phoneno\": \"9023848490\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/user/register",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8000/api/employee/addEmployee' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"role_id\": \"6904615724b2ad1685b73560\",\r\n    \"name\": \"Mann Patel\",\r\n    \"address\": \"Navsari\",\r\n    \"email\": \"patelms.sd@gmail.com\",\r\n    \"password\": \"mann@123\",\r\n    \"phoneno\": \"9023848495\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"patelhina.sd@gmail.com\",\r\n    \"password\": \"hina@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/user/login",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:8000/api/employee/login' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n    \"email\": \"patelur.sd@gmail.com\",\r\n    \"password\": \"urvi@123\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "event-addEvent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Python Seminar\",\r\n    \"category\": \"Seminar\",\r\n    \"venue\": \"Surat\",\r\n    \"date\": \"2025-11-10 05:00:00\",\r\n    \"totalSeats\": \"100\",\r\n    \"availableSeats\": \"100\",\r\n    \"price\": \"200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/addEvent",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"addEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event-listEvent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/listEvent?page=0&limit=10&organizerId=690865cd336052420a1d42b3&status=planned",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"listEvent"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "organizerId",
+							"value": "690865cd336052420a1d42b3"
+						},
+						{
+							"key": "status",
+							"value": "planned"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event-eventById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/eventById/6908727c801e90694b638b7c",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"eventById",
+						"6908727c801e90694b638b7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event-updateEvent",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Python Seminar\",\r\n    \"category\": \"Seminar\",\r\n    \"venue\": \"Surat\",\r\n    \"date\": \"2025-11-10 05:00:00\",\r\n    \"totalSeats\": \"100\",\r\n    \"availableSeats\": \"100\",\r\n    \"price\": \"300\",\r\n    \"status\": \"cancel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/updateEvent/6908727c801e90694b638b7c",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"updateEvent",
+						"6908727c801e90694b638b7c"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:9000/api/event/addEvent' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc' \\\r\n--data '{\r\n    \"title\": \"Python Seminar\",\r\n    \"category\": \"Seminar\",\r\n    \"venue\": \"Surat\",\r\n    \"date\": \"2025-11-10 05:00:00\",\r\n    \"totalSeats\": \"100\",\r\n    \"availableSeats\": \"100\",\r\n    \"price\": \"200\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "event-bookEvent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{AuthTokenEBS}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"eventId\": \"6908727c801e90694b638b7c\",\r\n  \"seatsBooked\": 2,\r\n  \"totalAmount\": 600,\r\n  \"paymentStatus\": \"success\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/bookEvent",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"bookEvent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event-listEvent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc"
+					}
+				],
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/bookEventList?page=0&limit=10",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"bookEventList"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "organizerId",
+							"value": "690865cd336052420a1d42b3",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "69084ee9577fcc32bf967f4a",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:9000/api/event/listEvent?page=0&limit=10&organizerId=690865cd336052420a1d42b3&status=planned' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc'"
+			},
+			"response": []
+		},
+		{
+			"name": "event-getGlobalAnalytics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MDg2NWNkMzM2MDUyNDIwYTFkNDJiMyIsInJvbGVfaWQiOiI2OTA4NjU4OTMzNjA1MjQyMGExZDQyYWMiLCJpYXQiOjE3NjIxNTgwNTcsImV4cCI6MTc2Mjc2Mjg1N30.Szsb-Xj4WAIPr4UPP7ueLq7y5RBlO8EzbF8eqEqoGkc"
+					}
+				],
+				"url": {
+					"raw": "{{LocalUrlofEBS}}/api/event/getGlobalAnalytics",
+					"host": [
+						"{{LocalUrlofEBS}}"
+					],
+					"path": [
+						"api",
+						"event",
+						"getGlobalAnalytics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
